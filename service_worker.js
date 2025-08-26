@@ -1,4 +1,4 @@
-const CACHE_NAME = 'managerfias-pwa-v0.2.4'
+const CACHE_NAME = 'managerfias-pwa-v0.2.4A'
 const urlsToCache = [
     '/',
     '/bundle.js',
