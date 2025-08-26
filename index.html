@@ -6,12 +6,12 @@
     <meta name="description" content="Búsqueda de códigos de documentos como monografías y esquemas" >
     <title>Managerfias</title>
 
-    <link rel="icon" type="image/png" href="/img/icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/img/icons/favicon.svg" />
-    <link rel="shortcut icon" href="/img/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="./img/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./img/icons/favicon.svg" />
+    <link rel="shortcut icon" href="./img/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Grafias" />
-    <link rel="manifest" href="/img/icons/site.webmanifest" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -148,6 +148,23 @@
         </div>
 
         <div class="row m-2">
+            <div class="col border border-primary">
+                <!-- Título de la columna-->
+                <div class="row text-info">
+                    <h1 class="center">
+                        Elegidas
+                    </h1>
+                </div>
+
+                <!-- Contenido de la lista -->
+                <div class="row text-white">
+                    <div class="col" id="elegidas">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-2">
             <div class="col">
                 <input type="search" list="grafias"
                         class="form-control"
@@ -180,20 +197,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col border border-primary">
-                <!-- Título de la columna-->
-                <div class="row text-info">
-                    <h1 class="center">
-                        Elegidas
-                    </h1>
-                </div>
-
-                <!-- Contenido de la lista -->
-                <div class="row text-white">
-                    <div class="col" id="elegidas">
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
@@ -207,5 +210,5 @@
             });
         }
     </script>
-<script defer src="bundle.js?6a29a417d903b09884a5"></script></body>
+<script defer src="bundle.js?50149b672ae883cda040"></script></body>
 </html>
