@@ -98,6 +98,27 @@
             outline: 2px solid yellow;
         }
 
+        .icon-mapa,
+        .icon-cromo,
+        .icon-esquema,
+        .icon-biografia,
+        .icon-monografia {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-size: cover;
+            background-position-x: left;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+        }
+
+        .icon-mapa { background-image: url('img/mapa.jpg'); }
+        .icon-cromo { background-image: url('img/cromo.jpg'); }
+        .icon-esquema { background-image: url('img/esquema.jpg'); }
+        .icon-biografia { background-image: url('img/biografia.jpg'); }
+        .icon-monografia { background-image: url('img/monografia.jpg'); }
+
     </style>
 </head>
 <body>
@@ -167,7 +188,7 @@
         <div class="row m-2">
             <div class="col">
                 <input type="search" list="grafias"
-                        class="form-control"
+                        class="form-control border-primary"
                         id="texto">
             </div>
         </div>
@@ -210,5 +231,5 @@
             });
         }
     </script>
-<script defer src="bundle.js?d46604b2ac86eb4b747c"></script></body>
+<script defer src="bundle.js?9fe765941ccbfff0de37"></script></body>
 </html>
