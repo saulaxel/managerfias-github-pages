@@ -465,6 +465,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E15", "Edad moderna"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E16", "Educación física"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E17", "Educación sexual, nuestro cuerpo"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E18", "Educación vial (Señales de tránsito)"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E18", "Educación vial 1"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E19", "Educación vial 2"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E20", "Ejercito mexicano"),
@@ -492,7 +493,8 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E41", "Enfermedades respiratorias"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E42", "Enfermedades venéreas"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E43", "Enseñanza en México, La"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E44", "Entidad, localidad y municipio"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E44-A", "Entidad, localidad y municipio"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E44-B", "Equidad de género"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E45", "Era precámbrica"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E46-A", "Eras geológicas"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E47-B", "Eras geológicas"),
@@ -2874,7 +2876,7 @@ var str_a_tipo_doc = function (str_tipo) {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -2888,14 +2890,14 @@ var str_a_tipo_doc = function (str_tipo) {
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -2908,12 +2910,12 @@ var str_a_tipo_doc = function (str_tipo) {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -2924,7 +2926,7 @@ var str_a_tipo_doc = function (str_tipo) {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
