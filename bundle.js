@@ -2995,7 +2995,14 @@ var actualizarDoctype = function () {
         var cls = "icon-" + (0,_js_modules_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.tipo_doc_a_str)(grafia.tipo);
         divImagen.classList.add(cls);
         divSugerencia.appendChild(divImagen);
-        var textoSugerencia = document.createTextNode(grafia.clave + " " + grafia.nombre);
+
+        var spanClave = document.createElement("SPAN");
+        spanClave.className = "clave";
+        spanClave.textContent = grafia.clave;
+
+        var textoNombre = document.createTextNode(" " + grafia.nombre);
+
+        divSugerencia.appendChild(spanClave);
         divSugerencia.appendChild(textoSugerencia);
         divSugerencia.classList.add("row");
         divSugerencia.classList.add("bg-info");
