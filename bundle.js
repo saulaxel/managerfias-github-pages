@@ -3003,7 +3003,7 @@ var actualizarDoctype = function () {
         var textoNombre = document.createTextNode(" " + grafia.nombre);
 
         divSugerencia.appendChild(spanClave);
-        divSugerencia.appendChild(textoSugerencia);
+        divSugerencia.appendChild(textoNombre);
         divSugerencia.classList.add("row");
         divSugerencia.classList.add("bg-info");
         divSugerencia.classList.add("rounded");
