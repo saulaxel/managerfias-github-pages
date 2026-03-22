@@ -2996,13 +2996,17 @@ var actualizarDoctype = function () {
         divImagen.classList.add(cls);
         divSugerencia.appendChild(divImagen);
 
-        var textoNombre = document.createTextNode(grafia.clave + "    " + grafia.nombre);
+        var spanClave = document.createElement("SPAN");
+        spanClave.className = "clave";
+        spanClave.textContent = grafia.clave;
 
+        var textoNombre = document.createTextNode("    " + grafia.nombre);
+
+        divSugerencia.appendChild(spanClave);
         divSugerencia.appendChild(textoNombre);
         divSugerencia.classList.add("row");
         divSugerencia.classList.add("bg-info");
         divSugerencia.classList.add("rounded");
-        divSugerencia.classList.add("clave");
         divSugerencia.style.padding = "0.2em";
         divSugerencia.style.margin = "0.5em";
         divSugerencia.style.display = "none";
