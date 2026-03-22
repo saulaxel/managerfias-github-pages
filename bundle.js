@@ -2996,12 +2996,8 @@ var actualizarDoctype = function () {
         divImagen.classList.add(cls);
         divSugerencia.appendChild(divImagen);
 
-        var spanClave = document.createElement("SPAN");
-        spanClave.textContent = grafia.clave;
+        var textoNombre = document.createTextNode(grafia.clave + "    " + grafia.nombre);
 
-        var textoNombre = document.createTextNode("    " + grafia.nombre);
-
-        divSugerencia.appendChild(spanClave);
         divSugerencia.appendChild(textoNombre);
         divSugerencia.classList.add("row");
         divSugerencia.classList.add("bg-info");
