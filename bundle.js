@@ -3381,7 +3381,7 @@ var str_a_tipo_doc = function (str_tipo) {
     else if (str_tipo === 'relieves') {
         return T_RELIEVE;
     }
-    throw new Error("Tipo desconocido ".concat(str_tipo));
+    throw new Error("Tipo desconocido <".concat(str_tipo).concat(">"));
 };
 
 
