@@ -938,7 +938,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 18", "Organismos internacionales"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 19", "Organismos unicelulares y pluricelulares"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 20", "Orientación, La"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 21", "Origen del hombre americano"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 21", "Origen del hombre americano (Pangea, Estrecho de Bering)"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 22", "Origen y formación de la tierra"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 23", "Origen y usos del maiz"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "O 24", "Orquesta sinfónica"),
