@@ -3496,7 +3496,14 @@ var listaDivs = [];
 var listaGrafias = [];
 var actualizarDescripcionSeleccionado = function () {
     var tipo_doc = obtenerRadioSeleccionado(radiosDoctype);
-    descSeleccionado.innerText = capitalizar(tipo_doc);
+    var nuevoTexto = capitalizar(tipo_doc);
+
+    descSeleccionado.classList.add("cambiando");
+
+    setTimeout(function () {
+        descSeleccionado.innerText = nuevoTexto;
+        descSeleccionado.classList.remove("cambiando");
+    }, 180);
 };
 var actualizarDoctype = function () {
     actualizarDescripcionSeleccionado();

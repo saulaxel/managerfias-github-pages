@@ -27,6 +27,22 @@
             --app-body-bg:   var(--bs-body-bg,   #fff);
             --app-body-color: var(--bs-body-color, #212529);
         }
+
+        #desc-seleccionado {
+            color: var(--app-info);
+            font-size: 1.1em;
+            font-weight: 600;
+            transition:
+                opacity 180ms ease,
+                transform 180ms ease;
+        }
+
+
+        #desc-seleccionado.cambiando {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+
         input[type="search"]::-webkit-search-decoration,
         input[type="search"]::-webkit-search-cancel-button,
         input[type="search"]::-webkit-search-results-button,
