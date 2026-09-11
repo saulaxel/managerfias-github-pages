@@ -3712,7 +3712,8 @@ var seleccionarEnesimo = function (n) {
     var nuevo = indiceSeleccionado;
     moverColorSeleccion(anterior, nuevo);
 };
-actualizarSugerencias("");
+var texto = normalizarTexto(inputTexto.value);
+actualizarSugerencias(texto);
 
 
 })();
