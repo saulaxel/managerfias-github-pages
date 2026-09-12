@@ -3357,7 +3357,7 @@ var tipo_doc_a_str = function (tipo) {
     else if (tipo == T_RELIEVE) {
         return 'relieve';
     }
-    throw new Error('Tipo desconocido');
+    throw new Error('Tipo desconocido <'.concat(tipo).concat('>'));
 };
 var str_a_tipo_doc = function (str_tipo) {
     if (str_tipo === 'todos') {
@@ -3492,7 +3492,7 @@ if (divSugerencias == null || inputTexto == null || divElegidas == null
     || radiosDoctype == null || descSeleccionado == null) {
     throw new Error("No se han encontrado los contenedores en el html");
 }
-var listaDivs = [];
+var listaDivsSugerencias = [];
 var listaGrafias = [];
 var actualizarDescripcionSeleccionado = function () {
     var tipo_doc = obtenerRadioSeleccionado(radiosDoctype);
@@ -3509,36 +3509,50 @@ var actualizarDoctype = function () {
     actualizarDescripcionSeleccionado();
     actualizarSugerencias(previousText);
 };
+
+var crearDivGrafia = function (grafia) {
+    var divGrafia = document.createElement("DIV");
+    var divImagen = document.createElement("DIV");
+    var strTipo = (0,_js_modules_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.tipo_doc_a_str)(grafia.tipo);
+    var cls = "icon-" + strTipo;
+
+    divImagen.classList.add(cls);
+    divGrafia.appendChild(divImagen);
+
+    var spanClave = document.createElement("SPAN");
+    spanClave.className = "clave";
+    spanClave.textContent = grafia.clave;
+
+    var textoNombre = document.createTextNode("    " + grafia.nombre);
+    divGrafia.appendChild(spanClave);
+    divGrafia.appendChild(textoNombre);
+    divGrafia.classList.add("row");
+    divGrafia.classList.add("bg-info");
+    divGrafia.classList.add("rounded");
+    divGrafia.style.padding = "0.2em";
+    divGrafia.style.margin = "0.5em";
+
+    divGrafia.style.cursor = "pointer";
+
+    return divGrafia;
+};
+
 (function () {
     var _loop_1 = function (i) {
         var grafia = _js_modules_datos_documentos_posta__WEBPACK_IMPORTED_MODULE_1__.baseDatosGrafias[i];
-        var divSugerencia = document.createElement("DIV");
-        var divImagen = document.createElement("DIV");
-        var cls = "icon-" + (0,_js_modules_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.tipo_doc_a_str)(grafia.tipo);
-        divImagen.classList.add(cls);
-        divSugerencia.appendChild(divImagen);
 
-        var spanClave = document.createElement("SPAN");
-        spanClave.className = "clave";
-        spanClave.textContent = grafia.clave;
-
-        var textoNombre = document.createTextNode("    " + grafia.nombre);
-
-        divSugerencia.appendChild(spanClave);
-        divSugerencia.appendChild(textoNombre);
-        divSugerencia.classList.add("row");
-        divSugerencia.classList.add("bg-info");
-        divSugerencia.classList.add("rounded");
-        divSugerencia.style.padding = "0.2em";
-        divSugerencia.style.margin = "0.5em";
+        var divSugerencia = crearDivGrafia(grafia);
+        /* Elementos ocultos hasta que se hace bUsqueda */
         divSugerencia.style.display = "none";
-        divSugerencia.style.cursor = "pointer";
+
+        divSugerencia.dataset.indice = i;
+
         divSugerencia.addEventListener('click', function () {
             seleccionarEnesimo(i);
         });
         divSugerencias.appendChild(divSugerencia);
         listaGrafias.push(grafia);
-        listaDivs.push(divSugerencia);
+        listaDivsSugerencias.push(divSugerencia);
     };
     for (var i = 0; i < _js_modules_datos_documentos_posta__WEBPACK_IMPORTED_MODULE_1__.baseDatosGrafias.length; i++) {
         _loop_1(i);
@@ -3551,6 +3565,9 @@ var actualizarDoctype = function () {
 })();
 var previousText = "";
 var listaSugerencias = [];
+var listaElegidas = JSON.parse(
+    localStorage.getItem("listaElegidas") || "[]"
+);;
 var indiceSeleccionado = 0;
 var pintarComoSeleccionada = function (div) {
     div.classList.remove("bg-info");
@@ -3564,8 +3581,8 @@ var limpiarSugerencias = function () {
     listaSugerencias = [];
     indiceSeleccionado = 0;
     for (var i = 0; i < listaGrafias.length; i++) {
-        listaDivs[i].style.display = "none";
-        pintarComoNoSeleccionada(listaDivs[i]);
+        listaDivsSugerencias[i].style.display = "none";
+        pintarComoNoSeleccionada(listaDivsSugerencias[i]);
     }
 };
 var keyEventTriggered = false;
@@ -3635,13 +3652,13 @@ var actualizarSugerencias = function (textoFiltro) {
         }
         if (valida) {
             listaSugerencias.push(i);
-            listaDivs[i].style.display = "flex";
+            listaDivsSugerencias[i].style.display = "flex";
         }
-        pintarComoNoSeleccionada(listaDivs[i]);
+        pintarComoNoSeleccionada(listaDivsSugerencias[i]);
     }
     if (listaSugerencias.length > 0) {
         indiceSeleccionado = 0;
-        var div = listaDivs[listaSugerencias[indiceSeleccionado]];
+        var div = listaDivsSugerencias[listaSugerencias[indiceSeleccionado]];
         pintarComoSeleccionada(div);
     }
     previousText = textoFiltro;
@@ -3658,24 +3675,50 @@ var vaciarBusqueda = function () {
     inputTexto.value = "";
     actualizarSugerencias("");
 };
+
+var guardarElegidasLocalStorage = function () {
+    localStorage.setItem(
+        "listaElegidas",
+        JSON.stringify(listaElegidas)
+    );
+};
+
+var renderizarElegidas = function () {
+    divElegidas.innerHTML = '';
+    for (const i of listaElegidas) {
+        var grafia = listaGrafias[i];
+        var el = crearDivGrafia(grafia);
+        pintarComoSeleccionada(el);
+        divElegidas.appendChild(el);
+    }
+};
+
 var aniadir = function () {
     if (listaSugerencias.length > 0) {
-        var indiceNodo = listaSugerencias[indiceSeleccionado];
-        var divEleccion = listaDivs[indiceNodo].cloneNode(true);
-        pintarComoSeleccionada(divEleccion);
-        divElegidas.appendChild(divEleccion);
+        var indiceDB = Number(listaDivsSugerencias[indiceSeleccionado].dataset.indice);
+
+        if (listaElegidas.includes(indiceDB)) {
+            return;
+        }
+
+        listaElegidas.push(indiceDB);
+        guardarElegidasLocalStorage();
+
+        renderizarElegidas();
     }
     previousText = normalizarTexto(inputTexto.value);
 };
 var resetearElegidas = function () {
     previousText = "";
     divElegidas.innerHTML = '';
+    listaElegidas = [];
+    guardarElegidasLocalStorage();
 };
 var moverColorSeleccion = function (anterior, nuevo) {
     var indiceAnterior = listaSugerencias[anterior];
     var indiceNuevo = listaSugerencias[nuevo];
-    pintarComoNoSeleccionada(listaDivs[indiceAnterior]);
-    pintarComoSeleccionada(listaDivs[indiceNuevo]);
+    pintarComoNoSeleccionada(listaDivsSugerencias[indiceAnterior]);
+    pintarComoSeleccionada(listaDivsSugerencias[indiceNuevo]);
 };
 var moverSeleccionAbajo = function () {
     var anterior = indiceSeleccionado;
@@ -3714,6 +3757,7 @@ var seleccionarEnesimo = function (n) {
 };
 var texto = normalizarTexto(inputTexto.value);
 actualizarSugerencias(texto);
+renderizarElegidas();
 
 
 })();
