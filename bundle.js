@@ -2214,7 +2214,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 3", "Machado, Manuel"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 4", "Madero, Francisco Ignacio"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 5", "Madero, Gustavo Adolfo"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 6", "Madre Teresa de Calcuta"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 6", "Madre Teresa de Calcuta (Gonxhe Bojaxhiu, Agnes)"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 7", "Madrid Hurtado Miguel de la"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 8", "Magallanes, Hernando de"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "M 9", "Magno, Alejandro"),
