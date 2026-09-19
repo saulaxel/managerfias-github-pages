@@ -567,8 +567,8 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 112", "Evolución del barco"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 113", "Evolución del coche y el ferrocarril"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 114", "Explosión demográfica"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 115", "Expropiación petrolera 1"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 116", "Explotación petrolera 2"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 115", "Expropiación petrolera 1 (18 de Marzo de 1938)"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 116", "Expropiación petrolera 2 (18 de Marzo de 1938)"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 117", "Evolución de las comunicaciones"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "F 1", "Factor biótica y abiótico (Seres vivos y muertos)"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "F 2", "Factor biótico y abiótico (Seres vivocs y muertos)"),
@@ -3696,7 +3696,7 @@ var renderizarElegidas = function () {
 
 var aniadir = function () {
     if (listaSugerencias.length > 0) {
-        var indiceDB = Number(listaDivsSugerencias[indiceSeleccionado].dataset.indice);
+        var indiceDB = Number(listaDivsSugerencias[listaSugerencias[indiceSeleccionado]].dataset.indice);
 
         if (listaElegidas.includes(indiceDB)) {
             return;
