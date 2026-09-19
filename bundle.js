@@ -1254,6 +1254,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "3", "REPÚBLICA MEXICANA DIVISIÓN POLÍTICA S/N"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "4", "REPÚBLICA MEXICANA OROGRAFÍA C/N"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "5", "REPÚBLICA MEXICANA OROGRAFÍA S/N"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "5-B", "República Mexicana Placas tectónicas"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "6", "REPÚBLICA MEXICANA HIDROGRAFÍA C/N"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "7", "REPÚBLICA MEXICANA HIDROGRAFÍA S/N"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MAPA, "8", "PLANISFERIO CONTORNO"),
