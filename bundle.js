@@ -3698,11 +3698,15 @@ var aniadir = function () {
     if (listaSugerencias.length > 0) {
         var indiceDB = Number(listaDivsSugerencias[listaSugerencias[indiceSeleccionado]].dataset.indice);
 
-        if (listaElegidas.includes(indiceDB)) {
+        var listaExtendida = [...listaElegidas, indiceDB];
+        // Limpieza de duplicados y ordenamiento en un solo paso
+        var listaLimpia = [...new Set(listaExtendida)].sort((a, b) => a - b);
+
+        if (listaLimpia.length == listaElegidas.length) {
             return;
         }
+        listaElegidas = listaLimpia;
 
-        listaElegidas.push(indiceDB);
         guardarElegidasLocalStorage();
 
         renderizarElegidas();
