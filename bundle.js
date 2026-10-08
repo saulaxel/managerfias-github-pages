@@ -1176,6 +1176,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 8", "Taxonomía, La"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 9", "Teclado de la computadora, El"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 10", "Teclado de la computadora, Código ASCII"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 10", "Tecnologías modernas"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 11", "Tejido animal y vegetal"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 12", "Tejido animal y vegetal"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "T 13", "Telescopio, El"),
