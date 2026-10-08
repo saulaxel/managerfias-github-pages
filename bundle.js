@@ -475,7 +475,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 23", "Electrostática"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 24", "Elementos de la computadora"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 25", "Elementos químicos"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 26", "Embarazo, El"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 26", "Embarazo, El (Cómo empieza la vida)"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 27", "Emiliano zapata 1"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 28-A", "Emiliano zapata 1"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_MONOGRAFIA, "E 28-B", "Emperadores romanos"),
