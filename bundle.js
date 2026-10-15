@@ -3567,9 +3567,27 @@ var crearDivGrafia = function (grafia) {
 })();
 var previousText = "";
 var listaSugerencias = [];
-var listaElegidas = JSON.parse(
-    localStorage.getItem("listaElegidas") || "[]"
-);;
+try {
+    const datoGuardado = localStorage.getItem("listaElegidas");
+
+    console.log("Valor de listaElegidas:", datoGuardado);
+
+    listaElegidas = JSON.parse(datoGuardado || "[]");
+
+    console.log("Lista recuperada:", listaElegidas);
+} catch (error) {
+    console.error("Error al recuperar listaElegidas:", error);
+
+    document.getElementById("error").innerText = `Error al recuperar listaElegidas: ${error.message || error}`;
+    /* 
+    console.error(
+        "Valor almacenado:",
+        localStorage.getItem("listaElegidas")
+    );
+    */
+
+    listaElegidas = [];
+}
 var indiceSeleccionado = 0;
 var pintarComoSeleccionada = function (div) {
     div.classList.remove("bg-info");
