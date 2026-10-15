@@ -3496,6 +3496,7 @@ if (divSugerencias == null || inputTexto == null || divElegidas == null
 }
 var listaDivsSugerencias = [];
 var listaGrafias = [];
+var listaElegidas = [];
 var actualizarDescripcionSeleccionado = function () {
     var tipo_doc = obtenerRadioSeleccionado(radiosDoctype);
     var nuevoTexto = capitalizar(tipo_doc);
