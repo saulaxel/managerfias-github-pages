@@ -1467,7 +1467,7 @@ var baseDatosGrafias = [
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 6", "Caldas, Francisco José"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 7", "Calderón de la Barca, Pedro"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 8", "Calderón, Fernando"),
-    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 9", "Calderón, Hinojosa F"),
+    new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 9", "Calderón, Hinojosa Felipe"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 10", "Calígula"),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 11", "Calleja, Félix Ma."),
     new Grafia(_enums_documentos__WEBPACK_IMPORTED_MODULE_0__.T_BIOGRAFIA, "C 12", "Calles, Plutarco Elías"),
